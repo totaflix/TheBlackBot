@@ -21,16 +21,16 @@ def is_enabled(value, default):
 PORT = environ.get("PORT", "8080")
 WEBHOOK = bool(environ.get("WEBHOOK", True)) # for web support on/off
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', '29450452'))
-API_HASH = environ.get('API_HASH', '54759945ff88b52777eec9a455944d31')
-BOT_TOKEN = environ.get('BOT_TOKEN', "")
+API_ID = int(environ.get('API_ID', '25194442'))
+API_HASH = environ.get('API_HASH', '9e93d41112872cc3bd58f4e29fd82c0a')
+BOT_TOKEN = environ.get('BOT_TOKEN', "8277114039:AAE-ag6JQgP_IDMFT3GqUJ9RKGZQ2K0EaVg")
 PICS = (environ.get('PICS' ,'https://telegra.ph/file/517bc12dd5c1347df10f6.jpg')).split()
 BOT_START_TIME = time()
 
 # Admins, Channels & Users
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1759982322').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001853074923 -1001565553195 -1002112912927 -1001889509068 -1001565553195').split()]
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1002947271067))
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7651377821').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002947271067 -1001565553195 -1002112912927 -1001889509068 -1001565553195').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_grp = environ.get('AUTH_GROUP', '')
@@ -38,10 +38,10 @@ auth_channel = environ.get('AUTH_CHANNEL', '-1001889509068')
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
-FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1001860177906')).split()]
+FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1002947271067')).split()]
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://suproboiragi2:t4GwmmrWCkUcX3Ui@cluster0.nn4hh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 MAX_RIST_BTNS = int(environ.get('MAX_RIST_BTNS', "10"))
